@@ -1,5 +1,3 @@
-console.log("JavaScript is working");
-
 const textBox = document.getElementById("text");
 
 const words = document.getElementById("words");
@@ -9,44 +7,104 @@ const sentences = document.getElementById("sentences");
 const paragraphs = document.getElementById("paragraphs");
 const reading = document.getElementById("reading");
 
+const clearButton = document.getElementById("clear");
+const copyButton = document.getElementById("copy");
 
-textBox.addEventListener("input", function () {
+const limitInput = document.getElementById("limit");
+const limitResult = document.getElementById("limitResult");
+
+
+function updateCounter() {
 
     const text = textBox.value;
 
-    // Characters
+
     characters.textContent = text.length;
 
-    // Characters without spaces
-    charactersNoSpaces.textContent = text.replace(/\s/g, "").length;
 
-    // Words
+    charactersNoSpaces.textContent =
+        text.replace(/\s/g, "").length;
+
+
+    words.textContent =
+        text.trim() === ""
+        ? 0
+        : text.trim().split(/\s+/).length;
+
+
+    sentences.textContent =
+        text.trim() === ""
+        ? 0
+        : text.split(/[.!?]+/).filter(Boolean).length;
+
+
+    paragraphs.textContent =
+        text.trim() === ""
+        ? 0
+        : text.split(/\n+/).filter(Boolean).length;
+
+
     const wordCount = text.trim() === ""
         ? 0
         : text.trim().split(/\s+/).length;
 
-    words.textContent = wordCount;
+
+    reading.textContent =
+        Math.ceil(wordCount / 200) + " min";
 
 
-    // Sentences
-    const sentenceCount = text.trim() === ""
-        ? 0
-        : text.split(/[.!?]+/).filter(Boolean).length;
+    updateLimit();
 
-    sentences.textContent = sentenceCount;
+}
 
 
-    // Paragraphs
-    const paragraphCount = text.trim() === ""
-        ? 0
-        : text.split(/\n+/).filter(Boolean).length;
+function updateLimit() {
 
-    paragraphs.textContent = paragraphCount;
+    const limit = Number(limitInput.value);
+
+    if (!limit) {
+        limitResult.textContent = "Characters remaining: -";
+        return;
+    }
 
 
-    // Reading time
-    const readingTime = Math.ceil(wordCount / 200);
+    const remaining = limit - textBox.value.length;
 
-    reading.textContent = readingTime + " min";
+
+    limitResult.textContent =
+        "Characters remaining: " + remaining;
+
+}
+
+
+
+textBox.addEventListener("input", updateCounter);
+
+
+limitInput.addEventListener("input", updateLimit);
+
+
+
+clearButton.addEventListener("click", function() {
+
+    textBox.value = "";
+
+    updateCounter();
+
+});
+
+
+
+copyButton.addEventListener("click", function() {
+
+    navigator.clipboard.writeText(textBox.value);
+
+    copyButton.textContent = "Copied!";
+
+    setTimeout(() => {
+
+        copyButton.textContent = "Copy Text";
+
+    }, 1500);
 
 });

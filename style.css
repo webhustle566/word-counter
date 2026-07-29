@@ -3,11 +3,13 @@
     font-family: Arial, sans-serif;
 }
 
+
 body {
     background: #f4f7fb;
     margin: 0;
     padding: 40px 20px;
 }
+
 
 .container {
     max-width: 900px;
@@ -15,14 +17,17 @@ body {
     text-align: center;
 }
 
+
 h1 {
     font-size: 40px;
     color: #222;
 }
 
+
 p {
     color: #666;
 }
+
 
 textarea {
     width: 100%;
@@ -35,10 +40,50 @@ textarea {
     resize: none;
 }
 
+
 textarea:focus {
     outline: none;
-    border-color: #333;
 }
+
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    background: black;
+    color: white;
+}
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+.limit-checker {
+    background: white;
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+
+.limit-checker input {
+    padding: 10px;
+    width: 250px;
+    font-size: 16px;
+}
+
 
 .stats {
     display: grid;
@@ -47,19 +92,15 @@ textarea:focus {
     margin-top: 25px;
 }
 
+
 .card {
     background: white;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
+
 
 .card h2 {
     margin: 0;
     font-size: 30px;
-    color: #222;
-}
-
-.card p {
-    margin-top: 10px;
 }
