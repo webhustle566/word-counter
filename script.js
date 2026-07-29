@@ -1,34 +1,52 @@
-const textInput = document.getElementById("textInput");
+console.log("JavaScript is working");
 
-const wordCount = document.getElementById("wordCount");
-const charCount = document.getElementById("charCount");
-const charNoSpaces = document.getElementById("charNoSpaces");
-const sentenceCount = document.getElementById("sentenceCount");
-const paragraphCount = document.getElementById("paragraphCount");
-const readingTime = document.getElementById("readingTime");
+const textBox = document.getElementById("text");
 
-textInput.addEventListener("input", () => {
-    const text = textInput.value;
+const words = document.getElementById("words");
+const characters = document.getElementById("characters");
+const charactersNoSpaces = document.getElementById("charactersNoSpaces");
+const sentences = document.getElementById("sentences");
+const paragraphs = document.getElementById("paragraphs");
+const reading = document.getElementById("reading");
+
+
+textBox.addEventListener("input", function () {
+
+    const text = textBox.value;
 
     // Characters
-    charCount.textContent = text.length;
+    characters.textContent = text.length;
 
     // Characters without spaces
-    charNoSpaces.textContent = text.replace(/\s/g, "").length;
+    charactersNoSpaces.textContent = text.replace(/\s/g, "").length;
 
     // Words
-    const words = text.trim().split(/\s+/).filter(word => word.length > 0);
-    wordCount.textContent = words.length;
+    const wordCount = text.trim() === ""
+        ? 0
+        : text.trim().split(/\s+/).length;
+
+    words.textContent = wordCount;
+
 
     // Sentences
-    const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0);
-    sentenceCount.textContent = sentences.length;
+    const sentenceCount = text.trim() === ""
+        ? 0
+        : text.split(/[.!?]+/).filter(Boolean).length;
+
+    sentences.textContent = sentenceCount;
+
 
     // Paragraphs
-    const paragraphs = text.split(/\n+/).filter(paragraph => paragraph.trim().length > 0);
-    paragraphCount.textContent = paragraphs.length;
+    const paragraphCount = text.trim() === ""
+        ? 0
+        : text.split(/\n+/).filter(Boolean).length;
 
-    // Reading time (average person reads ~200 words/min)
-    const minutes = Math.ceil(words.length / 200);
-    readingTime.textContent = minutes + " min";
+    paragraphs.textContent = paragraphCount;
+
+
+    // Reading time
+    const readingTime = Math.ceil(wordCount / 200);
+
+    reading.textContent = readingTime + " min";
+
 });
