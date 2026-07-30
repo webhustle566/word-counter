@@ -18,6 +18,13 @@ body {
 }
 
 
+.brand {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
 h1 {
     font-size: 40px;
     color: #222;
@@ -103,4 +110,46 @@ button:hover {
 .card h2 {
     margin: 0;
     font-size: 30px;
+}
+
+
+.how-it-works {
+
+    background: white;
+
+    margin-top: 40px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: left;
+
+}
+
+
+.how-it-works h2 {
+
+    text-align: center;
+
+}
+
+
+.how-it-works li {
+
+    margin: 10px 0;
+
+}
+
+
+footer {
+
+    margin-top: 40px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: #777;
+
 }
