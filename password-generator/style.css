@@ -1,0 +1,300 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f8fafc;
+
+    color: #1f2937;
+
+}
+
+
+
+.container {
+
+    max-width: 800px;
+
+    margin: 50px auto;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+
+
+
+.brand {
+
+    text-align: center;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+h1 {
+
+    text-align: center;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+p {
+
+    text-align: center;
+
+    color: #6b7280;
+
+    line-height: 1.6;
+
+}
+
+
+
+
+
+.privacy {
+
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: #6b7280;
+
+    text-align: center;
+
+}
+
+
+
+
+.password-box {
+
+    margin-top: 35px;
+
+}
+
+
+
+
+.password-box input {
+
+    width: 100%;
+
+    padding: 18px;
+
+    font-size: 20px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+}
+
+
+
+
+
+.buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin: 25px 0;
+
+}
+
+
+
+
+
+button {
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+}
+
+
+
+
+button:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+
+
+.settings,
+.strength,
+.how-it-works {
+
+    margin-top: 35px;
+
+    padding: 25px;
+
+    background: #f8fafc;
+
+    border-radius: 15px;
+
+}
+
+
+
+
+.settings h2,
+.strength h2,
+.how-it-works h2 {
+
+    text-align: center;
+
+    font-size: 24px;
+
+}
+
+
+
+
+.settings label {
+
+    display: block;
+
+    margin: 15px 0;
+
+    color: #374151;
+
+}
+
+
+
+
+
+input[type="range"] {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+}
+
+
+
+
+
+input[type="checkbox"] {
+
+    margin-right: 10px;
+
+}
+
+
+
+
+#strengthText {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+}
+
+
+
+
+
+.how-it-works ol {
+
+    color: #4b5563;
+
+    line-height: 1.8;
+
+}
+
+
+
+
+
+footer {
+
+    text-align: center;
+
+    margin-top: 40px;
+
+    color: #6b7280;
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+    .container {
+
+        margin: 20px;
+
+        padding: 25px;
+
+    }
+
+
+    h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    button {
+
+        width: 100%;
+
+    }
+
+
+}
