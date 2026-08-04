@@ -1,0 +1,303 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f3f4f6;
+    color:#1f2937;
+
+}
+
+.container{
+
+    max-width:850px;
+    margin:50px auto;
+    background:white;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.brand{
+
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:10px;
+
+}
+
+h1{
+
+    text-align:center;
+    margin-bottom:10px;
+    font-size:40px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+    color:#6b7280;
+    margin-bottom:10px;
+
+}
+
+.privacy{
+
+    text-align:center;
+    font-size:14px;
+    color:#6b7280;
+    margin-bottom:35px;
+
+}
+
+
+.calculator{
+
+    background:#f9fafb;
+    border-radius:18px;
+    padding:25px;
+
+}
+
+
+/* Display */
+
+#display{
+
+    width:100%;
+    height:70px;
+    font-size:34px;
+    padding:15px;
+    border:2px solid #d1d5db;
+    border-radius:12px;
+    margin-bottom:20px;
+    text-align:right;
+    outline:none;
+
+}
+
+#display:focus{
+
+    border-color:#2563eb;
+
+}
+
+
+/* DEG/RAD indicator */
+
+#angleIndicator{
+
+    font-size:12px;
+    color:#6b7280;
+    font-weight:bold;
+    margin-bottom:5px;
+
+}
+
+
+/* Top action buttons */
+
+.action-row{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-bottom:18px;
+
+}
+
+
+/* Main calculator buttons */
+
+.button-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+
+}
+
+
+/* Buttons */
+
+button{
+
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:18px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:18px;
+    transition:.2s;
+
+}
+
+
+button:hover{
+
+    background:#1d4ed8;
+    transform:translateY(-2px);
+
+}
+
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+
+/* Special buttons */
+
+.equals{
+
+    background:#16a34a;
+
+}
+
+
+.equals:hover{
+
+    background:#15803d;
+
+}
+
+
+.danger{
+
+    background:#dc2626;
+
+}
+
+
+.danger:hover{
+
+    background:#b91c1c;
+
+}
+
+
+/* Make zero button wider */
+
+.zero{
+
+    grid-column:span 2;
+
+}
+
+
+/* Make equals normal size */
+
+.equals{
+
+    grid-column:span 1;
+
+}
+
+
+/* Result */
+
+.result-box{
+
+    margin-top:25px;
+    background:#eff6ff;
+    border-left:5px solid #2563eb;
+    padding:18px;
+    border-radius:10px;
+    font-size:18px;
+
+}
+
+
+#answerLabel{
+
+    font-weight:bold;
+    color:#2563eb;
+
+}
+
+
+/* Instructions */
+
+.how-to{
+
+    margin-top:35px;
+
+}
+
+
+.how-to h2{
+
+    margin-bottom:12px;
+
+}
+
+
+.how-to ul{
+
+    padding-left:20px;
+    line-height:1.8;
+    color:#4b5563;
+
+}
+
+
+footer{
+
+    margin-top:40px;
+    text-align:center;
+    color:#9ca3af;
+    font-size:14px;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:700px){
+
+.container{
+
+    margin:15px;
+    padding:20px;
+
+}
+
+
+.button-grid{
+
+    gap:8px;
+
+}
+
+
+.action-row{
+
+    gap:8px;
+
+}
+
+
+button{
+
+    padding:15px;
+    font-size:16px;
+
+}
+
+
+#display{
+
+    font-size:26px;
+
+}
+
+}

@@ -43,4 +43,14 @@
     <priority>0.8</priority>
 </url>
 
+<url>
+
+    <loc>https://word-counter-mu-hazel.vercel.app/scientific-calculator/</loc>
+
+    <priority>1.0</priority>
+
+    <changefreq>weekly</changefreq>
+
+</url>
+
 </urlset>
