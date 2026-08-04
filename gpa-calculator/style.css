@@ -1,0 +1,350 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f8fafc;
+
+    color: #1f2937;
+
+}
+
+
+
+.container {
+
+    max-width: 900px;
+
+    margin: 50px auto;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+
+
+
+.brand {
+
+    text-align: center;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+h1 {
+
+    text-align: center;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+
+p {
+
+    text-align: center;
+
+    color: #6b7280;
+
+    line-height: 1.6;
+
+}
+
+
+
+
+
+.privacy {
+
+    font-size: 13px;
+
+    margin-top: 15px;
+
+}
+
+
+
+
+
+.settings,
+.classes,
+.result,
+.how-it-works {
+
+    margin-top: 35px;
+
+    padding: 25px;
+
+    background: #f8fafc;
+
+    border-radius: 15px;
+
+}
+
+
+
+
+
+h2 {
+
+    text-align: center;
+
+    font-size: 24px;
+
+}
+
+
+
+
+
+.settings label {
+
+    display: block;
+
+    text-align: center;
+
+    margin: 15px;
+
+}
+
+
+
+
+
+.settings input[type="number"] {
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    border: 1px solid #d1d5db;
+
+    width: 150px;
+
+}
+
+
+
+
+
+.class-row {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+
+.class-row input,
+.class-row select {
+
+
+    flex: 1;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid #d1d5db;
+
+}
+
+
+
+
+
+button {
+
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    display: block;
+
+    margin: 20px auto;
+
+
+}
+
+
+
+
+button:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+
+
+
+.remove {
+
+    background: #ef4444;
+
+}
+
+
+
+
+
+.remove:hover {
+
+    background: #dc2626;
+
+}
+
+
+
+
+
+#calculate {
+
+    width: 220px;
+
+}
+
+
+
+
+#gpaResult {
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+
+}
+
+
+
+
+
+.note {
+
+    font-size: 14px;
+
+    color: #6b7280;
+
+    margin-top: 10px;
+
+}
+
+
+
+
+
+.hidden {
+
+    display: none;
+
+}
+
+
+
+
+
+.how-it-works ol {
+
+    color: #4b5563;
+
+    line-height: 1.8;
+
+}
+
+
+
+
+
+footer {
+
+    text-align: center;
+
+    margin-top: 40px;
+
+    color: #6b7280;
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+    .container {
+
+        margin: 20px;
+
+        padding: 25px;
+
+    }
+
+
+    h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .class-row {
+
+        flex-direction: column;
+
+    }
+
+
+    .class-row input,
+    .class-row select {
+
+        width: 100%;
+
+    }
+
+
+}

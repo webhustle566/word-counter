@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Free GPA Calculator | Weighted & Unweighted GPA | WebHustle Tools</title>
+
+
+<meta name="description" content="Calculate semester and cumulative GPA with weighted and unweighted options. Add classes, credits, grades, and course levels with this free GPA calculator.">
+
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+
+
+<h2 class="brand">
+WebHustle Tools
+</h2>
+
+
+
+<h1>
+Free GPA Calculator
+</h1>
+
+
+
+<p>
+Calculate weighted, unweighted, semester, and cumulative GPA instantly.
+</p>
+
+
+
+
+<p class="privacy">
+
+🔒 Privacy: Your grades and information are calculated entirely in your browser.
+Nothing is uploaded or stored.
+
+</p>
+
+
+
+
+
+
+
+<div class="settings">
+
+
+<h2>
+Calculation Type
+</h2>
+
+
+
+<label>
+
+<input type="radio" name="calcType" value="semester" checked>
+
+Semester GPA
+
+</label>
+
+
+
+<label>
+
+<input type="radio" name="calcType" value="cumulative">
+
+Cumulative GPA
+
+</label>
+
+
+
+<div id="previousSection" class="hidden">
+
+
+<label>
+
+Previous GPA:
+
+<input type="number" id="previousGPA" step="0.01" placeholder="Example: 3.5">
+
+</label>
+
+
+
+<label>
+
+Previous Credits:
+
+<input type="number" id="previousCredits" placeholder="Example: 30">
+
+</label>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="classes">
+
+
+<h2>
+Classes
+</h2>
+
+
+
+
+<div id="classContainer"></div>
+
+
+
+
+
+<button id="addClass">
++ Add Class
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<button id="calculate">
+Calculate GPA
+</button>
+
+
+
+
+
+
+
+<div class="result">
+
+
+<h2>
+Your GPA
+</h2>
+
+
+<p id="gpaResult">
+-
+</p>
+
+
+
+<p class="note">
+
+Pass/Fail classes do not affect GPA but may count toward completed credits.
+
+</p>
+
+
+<p class="note">
+
+GPA scales vary by school. This calculator uses a standard 4.0 scale.
+Weighted GPA uses common Honors/AP weighting.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="how-it-works">
+
+
+<h2>
+How to Use
+</h2>
+
+
+<ol>
+
+<li>Add each class, grade, credits, and course level.</li>
+
+<li>Select semester or cumulative GPA.</li>
+
+<li>Click calculate to view your GPA.</li>
+
+</ol>
+
+
+
+</div>
+
+
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 WebHustle Tools | Free online productivity tools
+</p>
+
+</footer>
+
+
+
+
+</div>
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

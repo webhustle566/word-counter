@@ -37,5 +37,10 @@
     <priority>0.8</priority>
 </url>
 
+<url>
+    <loc>https://word-counter-mu-hazel.vercel.app/gpa-calculator/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
 
 </urlset>
