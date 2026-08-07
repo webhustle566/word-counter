@@ -1,0 +1,243 @@
+// ======================================
+// Elements
+// ======================================
+
+const unitSystem = document.getElementById("unitSystem");
+
+const heightUS = document.getElementById("heightUS");
+const heightMetric = document.getElementById("heightMetric");
+
+const weightUS = document.getElementById("weightUS");
+const weightMetric = document.getElementById("weightMetric");
+
+const calculateBtn = document.getElementById("calculateBtn");
+
+const maintain = document.getElementById("maintain");
+const mild = document.getElementById("mild");
+const loss = document.getElementById("loss");
+const extreme = document.getElementById("extreme");
+
+// ======================================
+// Clear Calculator
+// ======================================
+
+clearBtn.addEventListener("click",()=>{
+
+
+    document.getElementById("age").value="";
+
+    document.getElementById("feet").value="";
+
+    document.getElementById("inches").value="";
+
+    document.getElementById("pounds").value="";
+
+    document.getElementById("cm").value="";
+
+    document.getElementById("kg").value="";
+
+
+    maintain.textContent="—";
+
+    mild.textContent="—";
+
+    loss.textContent="—";
+
+    extreme.textContent="—";
+
+
+});
+
+// ======================================
+// Number Input Protection
+// ======================================
+
+const numberInputs = document.querySelectorAll('input[type="number"]');
+
+numberInputs.forEach(input => {
+
+    input.addEventListener("input", () => {
+
+        input.value = input.value.replace(/[^0-9.]/g, "");
+
+    });
+
+});
+
+// ======================================
+// Switch Between US & Metric
+// ======================================
+
+unitSystem.addEventListener("change",()=>{
+
+    if(unitSystem.value==="us"){
+
+        heightUS.style.display="block";
+        weightUS.style.display="block";
+
+        heightMetric.style.display="none";
+        weightMetric.style.display="none";
+
+    }
+
+    else{
+
+        heightUS.style.display="none";
+        weightUS.style.display="none";
+
+        heightMetric.style.display="block";
+        weightMetric.style.display="block";
+
+    }
+
+});
+
+
+
+// ======================================
+// Calculate Calories
+// ======================================
+
+calculateBtn.addEventListener("click",calculateCalories);
+
+function calculateCalories(){
+
+
+    const age =
+    Number(document.getElementById("age").value);
+
+    const gender =
+    document.getElementById("gender").value;
+
+    const activity =
+    Number(document.getElementById("activity").value);
+
+
+
+    let heightCM;
+    let weightKG;
+
+
+
+    // ------------------------------
+    // US Units
+    // ------------------------------
+
+    if(unitSystem.value==="us"){
+
+        const feet =
+        Number(document.getElementById("feet").value);
+
+        const inches =
+        Number(document.getElementById("inches").value);
+
+        const pounds =
+        Number(document.getElementById("pounds").value);
+
+
+        heightCM =
+        ((feet*12)+inches)*2.54;
+
+        weightKG =
+        pounds*0.45359237;
+
+    }
+
+
+
+    // ------------------------------
+    // Metric
+    // ------------------------------
+
+    else{
+
+        heightCM =
+        Number(document.getElementById("cm").value);
+
+        weightKG =
+        Number(document.getElementById("kg").value);
+
+    }
+
+
+
+    // ------------------------------
+    // Mifflin-St Jeor Equation
+    // ------------------------------
+
+    let bmr;
+
+    if(gender==="male"){
+
+        bmr =
+        (10*weightKG)+
+        (6.25*heightCM)-
+        (5*age)+5;
+
+    }
+
+    else{
+
+        bmr =
+        (10*weightKG)+
+        (6.25*heightCM)-
+        (5*age)-161;
+
+    }
+
+
+
+    const tdee =
+    Math.round(bmr*activity);
+
+
+
+    // ------------------------------
+    // Results
+    // ------------------------------
+
+    maintain.textContent =
+    `${tdee.toLocaleString()} Calories/day`;
+
+
+
+    mild.textContent =
+    `${Math.round(tdee*0.90).toLocaleString()} Calories/day`;
+
+
+
+    loss.textContent =
+    `${Math.round(tdee*0.80).toLocaleString()} Calories/day`;
+
+
+
+    extreme.textContent =
+    `${Math.round(tdee*0.60).toLocaleString()} Calories/day`;
+
+    // ======================================
+// Save Results For Printing
+// ======================================
+
+localStorage.setItem("calorieResults", JSON.stringify({
+
+    maintain:
+    maintain.textContent,
+
+    mild:
+    mild.textContent,
+
+    loss:
+    loss.textContent,
+
+    extreme:
+    extreme.textContent
+
+}));
+}
+
+
+
+// ======================================
+// First Calculation
+// ======================================
+

@@ -1,0 +1,499 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:#f3f4f6;
+
+    color:#1f2937;
+
+}
+
+.container{
+
+    max-width:850px;
+
+    margin:50px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+h1{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#6b7280;
+
+    margin-bottom:35px;
+
+    line-height:1.6;
+
+}
+
+
+
+/* ==========================
+   Calculator Card
+========================== */
+
+.calculator{
+
+    background:#f9fafb;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+
+
+.row{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+
+label{
+
+    font-weight:bold;
+
+    color:#374151;
+
+}
+
+
+
+input,
+select{
+
+    width:100%;
+
+    padding:15px;
+
+    font-size:18px;
+
+    border:2px solid #d1d5db;
+
+    border-radius:12px;
+
+    outline:none;
+
+}
+
+
+
+input:focus,
+select:focus{
+
+    border-color:#2563eb;
+
+}
+
+
+
+/* ==========================
+   Height & Weight Inputs
+========================== */
+
+.double-input{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+
+.double-input input{
+
+    flex:1;
+
+}
+
+
+
+.double-input span{
+
+    font-weight:bold;
+
+    color:#6b7280;
+
+}
+
+
+
+/* ==========================
+   Button
+========================== */
+
+button{
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:18px;
+
+    font-size:18px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+
+button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+
+
+/* ==========================
+   Results
+========================== */
+
+.results{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+
+
+.result-card{
+
+    background:#eff6ff;
+
+    border-left:5px solid #2563eb;
+
+    border-radius:15px;
+
+    padding:22px;
+
+}
+
+
+
+.result-card h3{
+
+    color:#2563eb;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.result-card small{
+
+    color:#6b7280;
+
+}
+
+
+
+.result-card p{
+
+    margin-top:15px;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    color:#1f2937;
+
+}
+
+
+
+/* ==========================
+   Mobile
+========================== */
+
+@media(max-width:700px){
+
+.container{
+
+    margin:15px;
+
+    padding:20px;
+
+}
+
+.results{
+
+    grid-template-columns:1fr;
+
+}
+
+.double-input{
+
+    flex-wrap:wrap;
+
+}
+
+button{
+
+    font-size:16px;
+
+}
+
+}
+
+/* =====================================
+   Information Sections
+====================================== */
+
+.info-section{
+
+    margin-top:45px;
+
+    padding:30px;
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    line-height:1.7;
+
+}
+
+.info-section h2{
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+    color:#1f2937;
+
+}
+
+.info-section h3{
+
+    font-size:20px;
+
+    margin-top:25px;
+
+    margin-bottom:8px;
+
+    color:#2563eb;
+
+}
+
+.info-section p{
+
+    color:#6b7280;
+
+    margin-bottom:16px;
+
+}
+
+.info-section ol,
+.info-section ul{
+
+    padding-left:25px;
+
+    color:#6b7280;
+
+}
+
+.info-section li{
+
+    margin-bottom:10px;
+
+}
+
+.formula-box{
+
+    background:#f9fafb;
+
+    border-left:4px solid #2563eb;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    margin:20px 0;
+
+}
+
+.formula-box strong{
+
+    display:block;
+
+    color:#2563eb;
+
+    margin-bottom:5px;
+
+}
+
+.formula-box p{
+
+    color:#374151;
+
+    font-weight:500;
+
+}
+
+/* =====================================
+   Title + Print Link
+====================================== */
+
+.title-row{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+
+.print-link{
+
+    position:absolute;
+
+    right:0;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    text-decoration:none;
+
+    color:#2563eb;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+}
+
+
+.print-link:hover{
+
+    color:#1d4ed8;
+
+}
+
+/* =====================================
+   Calculator Buttons
+====================================== */
+
+.button-row{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+
+#calculateBtn{
+
+    flex:1;
+
+}
+
+
+#clearBtn{
+
+    width:140px;
+
+    background:#dc2626;
+
+}
+
+
+#clearBtn:hover{
+
+    background:#b91c1c;
+
+}
+
+
+@media(max-width:700px){
+
+    .button-row{
+
+        flex-direction:column;
+
+    }
+
+
+    #clearBtn{
+
+        width:100%;
+
+    }
+
+}
