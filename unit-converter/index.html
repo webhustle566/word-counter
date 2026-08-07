@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Unit Converter | WebHustle Tools</title>
+
+<meta name="description" content="Free online unit converter for length, weight, temperature, volume, time, and speed.">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>
+
+Unit Converter
+
+</h1>
+
+
+<p class="subtitle">
+
+Convert units instantly and accurately.
+
+</p>
+
+
+
+<div class="converter">
+
+
+<div class="row">
+
+<label>
+
+<div class="row">
+
+<label>
+
+Category
+
+</label>
+
+<select id="category">
+
+<option value="length">Length</option>
+
+<option value="weight">Weight</option>
+
+<option value="temperature">Temperature</option>
+
+<option value="volume">Volume</option>
+
+<option value="time">Time</option>
+
+<option value="speed">Speed</option>
+
+</select>
+
+<div class="available-units">
+
+<p id="availableUnits"></p>
+
+</div>
+
+</div>
+
+
+
+
+<div class="row">
+
+<label>
+
+From
+
+</label>
+
+<select id="fromUnit">
+
+</select>
+
+</div>
+
+
+
+
+<div class="row">
+
+<label>
+
+To
+
+</label>
+
+<select id="toUnit">
+
+</select>
+
+</div>
+
+
+
+
+<div class="row">
+
+<label>
+
+Value
+
+</label>
+
+<input
+type="number"
+id="inputValue"
+placeholder="Enter value">
+
+</div>
+
+
+
+
+<button id="swapBtn">
+
+⇄ Swap Units
+
+</button>
+
+
+
+
+<!-- ------------------------------
+     Result Box
+------------------------------ -->
+
+<div class="result-box">
+
+    <h2>
+        Result
+    </h2>
+
+
+    <p id="result">
+        —
+    </p>
+
+
+
+    <!-- ------------------------------
+         Result Buttons
+    ------------------------------ -->
+
+    <div class="result-buttons">
+
+        <button id="copyBtn">
+            Copy
+        </button>
+
+
+        <button id="clearBtn">
+            Clear
+        </button>
+
+    </div>
+
+
+</div>
+
+<!-- ------------------------------
+         Formula Box
+    ------------------------------ -->
+
+    <div class="formula-box">
+
+        <h3>
+            Formula
+        </h3>
+
+
+        <p id="formula">
+            —
+        </p>
+
+
+    </div>
+
+
+</div>
+
+<!-- ------------------------------
+     Instructions Section
+------------------------------ -->
+
+<section class="info-section">
+
+    <h2>
+        How to Use the Unit Converter
+    </h2>
+
+
+    <p>
+        Using the WebHustle Tools Unit Converter is simple. Follow these steps:
+    </p>
+
+
+    <ol>
+
+        <li>
+            Select the conversion category.
+        </li>
+
+        <li>
+            Choose the unit you are converting from.
+        </li>
+
+        <li>
+            Choose the unit you want to convert to.
+        </li>
+
+        <li>
+            Enter your value and view your result instantly.
+        </li>
+
+        <li>
+            Copy your result for easy sharing, or clear the calculator and start a new conversion.
+        </li>
+
+    </ol>
+
+</section>
+
+
+
+<!-- ------------------------------
+     About Section
+------------------------------ -->
+
+
+<section class="info-section">
+
+    <h2>
+        About the Unit Converter
+    </h2>
+
+
+    <p>
+        The WebHustle Tools Unit Converter is a free online conversion tool
+        designed to quickly convert between different measurement units.
+        Convert length, weight, temperature, volume, time, speed, and more
+        directly in your browser.
+    </p>
+
+
+    <p>
+        Unlike basic converters, WebHustle Tools also provides conversion
+        formulas and step-by-step calculations so you can understand how
+        each result is calculated. This makes it useful for students,
+        professionals, travelers, and everyday calculations.
+    </p>
+
+
+    <p>
+        All conversions happen instantly in your browser with no downloads
+        or accounts required.
+    </p>
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

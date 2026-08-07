@@ -116,8 +116,17 @@ nav {
 
     flex-direction: column;
 
+    transition: .25s;
+
 }
 
+.tool-card:hover{
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 40px rgba(0,0,0,.12);
+
+}
 
 
 .icon {
@@ -175,7 +184,74 @@ nav {
 }
 
 
+/* Features */
 
+.features{
+
+    max-width:1100px;
+
+    margin:70px auto;
+
+    padding:0 40px;
+
+}
+
+
+.features h2{
+
+    text-align:center;
+
+    font-size:36px;
+
+    margin-bottom:40px;
+
+}
+
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+    max-width:900px;
+
+    margin:0 auto;
+
+}
+
+
+.feature-grid div{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+.feature-grid h3{
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+
+.feature-grid p{
+
+    color:#6b7280;
+
+    line-height:1.7;
+
+}
 /* Footer */
 
 footer {
