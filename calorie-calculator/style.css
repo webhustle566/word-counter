@@ -497,3 +497,90 @@ button{
     }
 
 }
+/* =====================================
+   Navigation
+====================================== */
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 40px;
+
+    background:white;
+
+    border-bottom:1px solid #e5e7eb;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+
+.logo a{
+
+    color:#1f2937;
+
+    text-decoration:none;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+
+.nav-links{
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+
+.nav-links a{
+
+    color:#4b5563;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+
+.nav-links a:hover{
+
+    color:#2563eb;
+
+}
+
+
+@media(max-width:700px){
+
+    nav{
+
+        padding:18px 20px;
+
+    }
+
+
+    .nav-links{
+
+        gap:14px;
+
+        font-size:14px;
+
+    }
+
+}
