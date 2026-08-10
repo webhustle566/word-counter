@@ -413,6 +413,182 @@ footer {
 
 #shareButton:hover {
 
+
     background: #1d4ed8;
+
+}
+
+/* =====================================
+   Mobile Homepage Improvements
+====================================== */
+
+@media (max-width: 700px) {
+
+    /* Navigation */
+
+    nav {
+        padding: 16px 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links a {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding: 55px 20px 45px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        line-height: 1.15;
+        margin-bottom: 18px;
+    }
+
+    .hero p {
+        font-size: 17px;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+
+    /* Tools */
+
+    #tools {
+        padding: 30px 15px;
+    }
+
+    #tools h2 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+
+    /* Two tool cards per row */
+
+    .tool-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        width: 100%;
+    }
+
+
+    .tool-card {
+        width: 100%;
+        min-height: 300px;
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+
+
+    .icon {
+        font-size: 34px;
+    }
+
+
+    .tool-card h3 {
+        font-size: 19px;
+        line-height: 1.25;
+        margin: 15px 0 10px;
+    }
+
+
+    .tool-card p {
+        font-size: 14px;
+        line-height: 1.45;
+        margin: 0;
+    }
+
+
+    .tool-card a {
+        padding: 10px 8px;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+
+
+    /* Features */
+
+    .features {
+        margin: 50px auto;
+        padding: 0 15px;
+    }
+
+
+    .features h2 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+
+    .feature-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+    }
+
+
+    .feature-grid div {
+        padding: 18px 10px;
+        border-radius: 14px;
+        text-align: center;
+    }
+
+
+    .feature-grid h3 {
+        font-size: 17px;
+        margin-bottom: 8px;
+        white-space: nowrap;
+    }
+
+
+    .feature-grid p {
+        font-size: 13px;
+        line-height: 1.45;
+        margin: 0;
+    }
+
+
+    /* Share Section */
+
+    .share-section {
+        width: calc(100% - 30px);
+        margin: 45px auto 30px;
+        padding: 30px 20px;
+    }
+
+
+    .share-section h2 {
+        font-size: 25px;
+    }
+
+
+    .share-section p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+
+    #shareButton {
+        width: 100%;
+        max-width: 300px;
+        padding: 13px 20px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 30px 20px;
+        font-size: 14px;
+    }
 
 }
