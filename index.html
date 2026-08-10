@@ -15,7 +15,6 @@
 
 </head>
 
-
 <body>
 
 
@@ -342,9 +341,26 @@ Clean designs made for everyday use.
 
 </section>
 
+<!-- =====================================
+     Share WebHustle Tools
+====================================== -->
 
+<section class="share-section">
 
+    <h2>
+        Share WebHustle Tools
+    </h2>
 
+    <p>
+        Know someone who could use these tools?
+        Share WebHustle Tools with a friend!
+    </p>
+
+    <button id="shareButton">
+        Share WebHustle Tools
+    </button>
+
+</section>
 
 
 <footer>
@@ -392,6 +408,56 @@ backToTop.addEventListener("click", () => {
         behavior:"smooth"
 
     });
+
+});
+
+</script>
+
+<script>
+
+const shareButton = document.getElementById("shareButton");
+
+shareButton.addEventListener("click", async () => {
+
+    const shareData = {
+        title: "WebHustle Tools",
+        text: "Check out WebHustle Tools — free online tools for everyday tasks.",
+        url: window.location.origin
+    };
+
+
+    if (navigator.share) {
+
+        try {
+
+            await navigator.share(shareData);
+
+        } catch (error) {
+
+            // User closed the share menu.
+        }
+
+    } else {
+
+        try {
+
+            await navigator.clipboard.writeText(window.location.origin);
+
+            shareButton.textContent = "Link Copied!";
+
+            setTimeout(() => {
+
+                shareButton.textContent = "Share WebHustle Tools";
+
+            }, 2000);
+
+        } catch (error) {
+
+            shareButton.textContent = "Copy Link";
+
+        }
+
+    }
 
 });
 
