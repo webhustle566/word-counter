@@ -584,3 +584,63 @@ nav{
     }
 
 }
+
+/* =====================================
+   Back to Top Button
+====================================== */
+
+#backToTop{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.18);
+
+    transition:.2s;
+
+    z-index:999;
+
+}
+
+
+#backToTop:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+
+#backToTop:active{
+
+    transform:scale(.95);
+
+}

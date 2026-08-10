@@ -74,3 +74,39 @@ function clearText() {
     document.getElementById("output").value = "";
 
 }
+
+// =====================================
+// Back to Top Button
+// =====================================
+
+const backToTop = document.getElementById("backToTop");
+
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 500){
+
+        backToTop.style.display = "flex";
+
+    }
+
+    else{
+
+        backToTop.style.display = "none";
+
+    }
+
+});
+
+
+backToTop.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+});
