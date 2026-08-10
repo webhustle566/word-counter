@@ -2,29 +2,50 @@ const input = document.getElementById("qr-input");
 const generateBtn = document.getElementById("generate");
 const clearBtn = document.getElementById("clear");
 const downloadBtn = document.getElementById("download");
+const printBtn = document.getElementById("print");
 const qrContainer = document.getElementById("qrcode");
+const backToTop = document.getElementById("backToTop");
 
 let qrCode = null;
+
+
+// =====================================
+// Generate QR Code
+// =====================================
 
 generateBtn.addEventListener("click", () => {
 
     const text = input.value.trim();
 
     if (text === "") {
+
         alert("Please enter a website or text first.");
+
         return;
+
     }
+
 
     qrContainer.innerHTML = "";
 
+
     qrCode = new QRCode(qrContainer, {
+
         text: text,
+
         width: 220,
+
         height: 220
+
     });
 
 });
 
+
+
+// =====================================
+// Clear
+// =====================================
 
 clearBtn.addEventListener("click", () => {
 
@@ -32,17 +53,29 @@ clearBtn.addEventListener("click", () => {
 
     qrContainer.innerHTML = "";
 
+    qrCode = null;
+
 });
 
+
+
+// =====================================
+// Download QR Code
+// =====================================
 
 downloadBtn.addEventListener("click", () => {
 
     const img = qrContainer.querySelector("img");
 
+
     if (!img) {
+
         alert("Generate a QR Code first.");
+
         return;
+
     }
+
 
     const link = document.createElement("a");
 
@@ -54,22 +87,48 @@ downloadBtn.addEventListener("click", () => {
 
 });
 
+
+
 // =====================================
-// Back to Top Button
+// Print QR Code
 // =====================================
 
-const backToTop = document.getElementById("backToTop");
+printBtn.addEventListener("click", () => {
 
+    const img = qrContainer.querySelector("img");
+
+
+    if (!img) {
+
+        alert("Generate a QR Code first.");
+
+        return;
+
+    }
+
+
+    localStorage.setItem("qrCodeToPrint", img.src);
+
+
+    window.open("print.html", "_blank");
+
+});
+
+
+
+// =====================================
+// Back to Top
+// =====================================
 
 window.addEventListener("scroll", () => {
 
-    if(window.scrollY > 500){
+    if (window.scrollY > 500) {
 
         backToTop.style.display = "flex";
 
     }
 
-    else{
+    else {
 
         backToTop.style.display = "none";
 
@@ -82,9 +141,9 @@ backToTop.addEventListener("click", () => {
 
     window.scrollTo({
 
-        top:0,
+        top: 0,
 
-        behavior:"smooth"
+        behavior: "smooth"
 
     });
 

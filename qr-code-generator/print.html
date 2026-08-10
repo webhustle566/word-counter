@@ -5,11 +5,11 @@
 
 <meta charset="UTF-8">
 
-<meta name="robots" content="noindex">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Calorie Results | WebHustle Tools</title>
+<meta name="robots" content="noindex">
+
+<title>Print QR Code | WebHustle Tools</title>
 
 
 <style>
@@ -35,7 +35,7 @@ body {
 
 
 /* =====================================
-   Brand
+   WebHustle Branding
 ====================================== */
 
 .print-brand {
@@ -46,7 +46,7 @@ body {
 
     font-weight: bold;
 
-    
+    color: #1f2937;
 
     margin-bottom: 25px;
 
@@ -54,10 +54,10 @@ body {
 
 
 /* =====================================
-   Results Container
+   Preview Container
 ====================================== */
 
-.container {
+.print-container {
 
     max-width: 600px;
 
@@ -78,58 +78,35 @@ h1 {
 
     text-align: center;
 
-    margin-top: 0;
+    margin: 0 0 10px;
+
+}
+
+
+p {
+
+    text-align: center;
+
+    color: #6b7280;
 
     margin-bottom: 30px;
 
 }
 
 
-.result {
+/* =====================================
+   QR Code
+====================================== */
 
-    background: #eff6ff;
+#qrPrint {
 
-    border-left: 5px solid #2563eb;
+    width: 220px;
 
-    padding: 20px;
+    height: 220px;
 
-    border-radius: 12px;
+    display: block;
 
-}
-
-
-.card {
-
-    margin-bottom: 25px;
-
-}
-
-
-.card:last-child {
-
-    margin-bottom: 0;
-
-}
-
-
-.card h2 {
-
-    color: #2563eb;
-
-    font-size: 20px;
-
-    margin-bottom: 8px;
-
-}
-
-
-.card p {
-
-    font-size: 28px;
-
-    font-weight: bold;
-
-    margin: 0;
+    margin: 0 auto 30px;
 
 }
 
@@ -140,7 +117,7 @@ h1 {
 
 .print-button {
 
-    margin-top: 25px;
+    display: block;
 
     width: 100%;
 
@@ -190,7 +167,7 @@ h1 {
 
 
 /* =====================================
-   Print Layout
+   PRINT
 ====================================== */
 
 @media print {
@@ -229,22 +206,30 @@ h1 {
     }
 
 
-    .print-brand {
+    /* Hide EVERYTHING except QR code */
 
-        display: none;
+    .print-brand,
+    h1,
+    p,
+    .print-button,
+    .back-button {
+
+        display: none !important;
 
     }
 
 
-    .container {
+    .print-container {
 
         width: 100%;
 
-        max-width: 600px;
+        height: 100%;
+
+        max-width: none;
 
         margin: 0;
 
-        padding: 40px;
+        padding: 0;
 
         background: white;
 
@@ -252,13 +237,22 @@ h1 {
 
         border-radius: 0;
 
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
     }
 
 
-    .print-button,
-    .back-button {
+    #qrPrint {
 
-        display: none;
+        width: 220px;
+
+        height: 220px;
+
+        margin: 0;
 
     }
 
@@ -279,77 +273,29 @@ h1 {
 </div>
 
 
-<div class="container">
+<div class="print-container">
 
 
     <h1>
-        Calorie Results
+        Print QR Code
     </h1>
 
 
-    <div class="result">
+    <p>
+        Your QR code is ready to print.
+    </p>
 
 
-        <div class="card">
-
-            <h2>
-                Maintain Weight
-            </h2>
-
-            <p id="maintain">
-                —
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h2>
-                Mild Weight Loss
-            </h2>
-
-            <p id="mild">
-                —
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h2>
-                Weight Loss
-            </h2>
-
-            <p id="loss">
-                —
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h2>
-                Extreme Weight Loss
-            </h2>
-
-            <p id="extreme">
-                —
-            </p>
-
-        </div>
-
-
-    </div>
+    <img
+        id="qrPrint"
+        alt="QR Code">
 
 
     <button
         class="print-button"
         onclick="window.print()">
 
-        Print Results
+        Print QR Code
 
     </button>
 
@@ -358,7 +304,7 @@ h1 {
         href="index.html"
         class="back-button">
 
-        ← Back to Calorie Calculator
+        ← Back to QR Code Generator
 
     </a>
 
@@ -368,43 +314,32 @@ h1 {
 
 <script>
 
-const results =
-    JSON.parse(localStorage.getItem("calorieResults"));
+const qrImage =
+    localStorage.getItem("qrCodeToPrint");
 
 
-if (results) {
+if (qrImage) {
 
-    document.getElementById("maintain").textContent =
-        results.maintain;
-
-    document.getElementById("mild").textContent =
-        results.mild;
-
-    document.getElementById("loss").textContent =
-        results.loss;
-
-    document.getElementById("extreme").textContent =
-        results.extreme;
+    document.getElementById("qrPrint").src =
+        qrImage;
 
 }
 
 else {
 
-    document.querySelector(".container").innerHTML = `
+    document.querySelector(".print-container").innerHTML = `
 
-        <h1>No Results Found</h1>
+        <h1>No QR Code Found</h1>
 
-        <p style="text-align:center; color:#6b7280;">
-
-            Please calculate your calorie needs first.
-
+        <p>
+            Please generate a QR code first.
         </p>
 
         <a
             href="index.html"
             class="back-button">
 
-            ← Back to Calorie Calculator
+            ← Back to QR Code Generator
 
         </a>
 

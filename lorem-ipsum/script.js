@@ -57,13 +57,33 @@ function generateLorem() {
 
 function copyText() {
 
-    let text = document.getElementById("output");
+    const text = document.getElementById("output");
 
-    text.select();
+    const copyButton = document.querySelector(
+        '.buttons button[onclick="copyText()"]'
+    );
+
+
+    if (!text.value.trim()) {
+
+        return;
+
+    }
+
 
     navigator.clipboard.writeText(text.value);
 
-    alert("Copied!");
+
+    const originalText = copyButton.textContent;
+
+    copyButton.textContent = "Copied!";
+
+
+    setTimeout(() => {
+
+        copyButton.textContent = originalText;
+
+    }, 1500);
 
 }
 

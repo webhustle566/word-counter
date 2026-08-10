@@ -174,14 +174,14 @@ button:hover {
 
 .secondary {
 
-    background: #6b7280;
+    background: #dc2626;
 
 }
 
 
 .secondary:hover {
 
-    background: #4b5563;
+    background: #b91c1c;
 
 }
 
@@ -388,6 +388,98 @@ nav{
         bottom:20px;
 
         font-size:21px;
+
+    }
+
+}
+
+/* =====================================
+   Informational Sections
+====================================== */
+
+.info-section {
+
+    max-width: 750px;
+
+    margin: 30px auto;
+
+    padding: 35px 40px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+}
+
+
+.info-section h2 {
+
+    font-size: 28px;
+
+    margin-top: 0;
+
+    margin-bottom: 18px;
+
+}
+
+
+.info-section p {
+
+    color: #4b5563;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+
+}
+
+
+.info-section ol,
+.info-section ul {
+
+    color: #4b5563;
+
+    line-height: 1.7;
+
+    padding-left: 25px;
+
+}
+
+
+.info-section li {
+
+    margin-bottom: 12px;
+
+}
+
+
+.info-section strong {
+
+    color: #1f2937;
+
+}
+
+
+/* =====================================
+   Informational Sections - Mobile
+====================================== */
+
+@media(max-width:700px){
+
+    .info-section {
+
+        margin: 20px;
+
+        padding: 28px 24px;
+
+    }
+
+
+    .info-section h2 {
+
+        font-size: 24px;
 
     }
 

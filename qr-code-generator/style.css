@@ -397,3 +397,66 @@ nav{
     }
 
 }
+
+/* =====================================
+   Print Page Brand
+====================================== */
+
+.print-brand {
+
+    text-align: center;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+
+    margin-bottom: 25px;
+
+}
+
+/* =====================================
+   QR Code Button Colors
+====================================== */
+
+.generate-button {
+
+    background: #16a34a;
+
+}
+
+
+.generate-button:hover {
+
+    background: #15803d;
+
+}
+
+
+.print-button {
+
+    background: #6b7280;
+
+}
+
+
+.print-button:hover {
+
+    background: #4b5563;
+
+}
+
+
+.clear-button {
+
+    background: #dc2626;
+
+}
+
+
+.clear-button:hover {
+
+    background: #b91c1c;
+
+}
