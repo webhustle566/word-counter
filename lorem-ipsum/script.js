@@ -130,3 +130,28 @@ backToTop.addEventListener("click", () => {
     });
 
 });
+
+// =====================================
+// Highlight Current Tool
+// =====================================
+
+const currentPage = window.location.pathname;
+
+const toolLinks = document.querySelectorAll(
+    ".tools-dropdown-menu a"
+);
+
+toolLinks.forEach(link => {
+
+    const linkPath = new URL(
+        link.href,
+        window.location.origin
+    ).pathname;
+
+    if (currentPage === linkPath) {
+
+        link.classList.add("current-tool");
+
+    }
+
+});
