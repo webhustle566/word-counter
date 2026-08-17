@@ -1073,3 +1073,9 @@ nav {
     background: #1d4ed8;
 
 }
+#shareButton {
+    width: auto !important;
+    min-width: 0 !important;
+    display: block;
+    margin: 0 auto;
+}

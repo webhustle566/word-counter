@@ -561,9 +561,11 @@ toolLinks.forEach(link => {
 
 });
 
-const shareButton = document.getElementById("shareButton");
+document.addEventListener("DOMContentLoaded", () => {
 
-if (shareButton) {
+    const shareButton = document.getElementById("shareButton");
+
+    if (!shareButton) return;
 
     shareButton.addEventListener("click", async () => {
 
@@ -576,8 +578,11 @@ if (shareButton) {
         if (navigator.share) {
 
             try {
+
                 await navigator.share(shareData);
+
             } catch (error) {
+
                 // User closed the share menu.
             }
 
@@ -590,7 +595,9 @@ if (shareButton) {
                 shareButton.textContent = "Link Copied!";
 
                 setTimeout(() => {
+
                     shareButton.textContent = "Share This Tool";
+
                 }, 2000);
 
             } catch (error) {
@@ -603,4 +610,4 @@ if (shareButton) {
 
     });
 
-}
+});
