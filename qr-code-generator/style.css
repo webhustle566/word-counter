@@ -592,3 +592,208 @@ nav{
     color: #1d4ed8;
 
 }
+/* =====================================
+   QR Code Generator - Mobile Improvements
+====================================== */
+
+@media (max-width:700px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+
+    .container{
+
+        width:calc(100% - 30px);
+
+        max-width:none;
+
+        margin:15px auto;
+
+        padding:20px 16px;
+
+        border-radius:18px;
+
+    }
+
+
+    .brand{
+
+        font-size:21px;
+
+        margin-bottom:10px;
+
+    }
+
+
+    h1{
+
+        font-size:30px;
+
+        line-height:1.2;
+
+        margin-bottom:12px;
+
+    }
+
+
+    p{
+
+        font-size:15px;
+
+        line-height:1.6;
+
+        margin-bottom:22px;
+
+    }
+
+
+    /* QR text input */
+
+    textarea{
+
+        height:150px;
+
+        padding:14px;
+
+        font-size:16px;
+
+        line-height:1.5;
+
+        border-radius:11px;
+
+    }
+
+
+    /* Buttons */
+
+    .buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:10px;
+
+        margin-top:20px;
+
+    }
+
+
+    .buttons button{
+
+        width:100%;
+
+        max-width:280px;
+
+        padding:13px 20px;
+
+        font-size:16px;
+
+    }
+
+
+    /* QR Code */
+
+    .qr-box{
+
+        margin-top:30px;
+
+        min-height:240px;
+
+        padding:10px;
+
+        overflow:hidden;
+
+    }
+
+
+    #qrcode{
+
+        max-width:100%;
+
+        padding:15px;
+
+        border-radius:14px;
+
+    }
+
+
+    #qrcode img,
+    #qrcode canvas{
+
+        max-width:100%;
+
+        height:auto;
+
+    }
+
+
+    /* How it works */
+
+    .how-it-works{
+
+        margin-top:30px;
+
+        padding:22px 18px;
+
+        border-radius:14px;
+
+    }
+
+
+    .how-it-works h2{
+
+        font-size:22px;
+
+        line-height:1.3;
+
+        margin-bottom:15px;
+
+    }
+
+
+    .how-it-works ol{
+
+        padding-left:20px;
+
+        font-size:15px;
+
+        line-height:1.7;
+
+    }
+
+
+    /* Print page brand */
+
+    .print-brand{
+
+        font-size:20px;
+
+        margin-bottom:20px;
+
+    }
+
+
+    /* Back to top */
+
+    #backToTop{
+
+        width:46px;
+
+        height:46px;
+
+        min-height:46px;
+
+        right:20px;
+
+        bottom:20px;
+
+        padding:0;
+
+        font-size:21px;
+
+    }
+
+}

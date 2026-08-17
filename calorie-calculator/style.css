@@ -776,3 +776,292 @@ nav{
     color: #1d4ed8;
 
 }
+
+/* =====================================
+   Calorie Calculator - Mobile Optimization
+====================================== */
+
+@media (max-width:700px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+
+    .container{
+
+        width:calc(100% - 20px);
+
+        max-width:none;
+
+        margin:20px auto;
+
+        padding:22px 17px;
+
+        border-radius:18px;
+
+    }
+
+
+    h1{
+
+        font-size:32px;
+
+        line-height:1.15;
+
+        margin-bottom:10px;
+
+    }
+
+
+    .subtitle{
+
+        font-size:15px;
+
+        line-height:1.6;
+
+        margin-bottom:28px;
+
+    }
+
+
+    /* Calculator */
+
+    .calculator{
+
+        padding:20px 16px;
+
+        border-radius:16px;
+
+        gap:22px;
+
+    }
+
+
+    .row{
+
+        gap:8px;
+
+    }
+
+
+    label{
+
+        font-size:15px;
+
+    }
+
+
+    input,
+    select{
+
+        width:100%;
+
+        height:54px;
+
+        padding:12px 14px;
+
+        font-size:16px;
+
+        border-radius:11px;
+
+    }
+
+
+    /* Height / weight inputs */
+
+    .double-input{
+
+        width:100%;
+
+        gap:8px;
+
+    }
+
+
+    .double-input input{
+
+        min-width:0;
+
+    }
+
+
+    .double-input span{
+
+        font-size:14px;
+
+    }
+
+
+    /* Calculate / Clear buttons */
+
+    .button-row{
+
+        gap:10px;
+
+    }
+
+
+    button{
+
+        width:100%;
+
+        min-height:54px;
+
+        padding:14px;
+
+        font-size:16px;
+
+        border-radius:11px;
+
+    }
+
+
+    #clearBtn{
+
+        width:100%;
+
+    }
+
+
+    /* Results */
+
+    .results{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+        margin-top:25px;
+
+    }
+
+
+    .result-card{
+
+        padding:18px;
+
+        border-radius:13px;
+
+    }
+
+
+    .result-card h3{
+
+        font-size:18px;
+
+    }
+
+
+    .result-card p{
+
+        font-size:26px;
+
+        margin-top:12px;
+
+    }
+
+
+    /* Information sections */
+
+    .info-section{
+
+        margin-top:30px;
+
+        padding:20px;
+
+        border-radius:16px;
+
+    }
+
+
+    .info-section h2{
+
+        font-size:23px;
+
+        line-height:1.3;
+
+    }
+
+
+    .info-section h3{
+
+        font-size:18px;
+
+    }
+
+
+    .info-section p,
+    .info-section li{
+
+        font-size:15px;
+
+        line-height:1.7;
+
+    }
+
+
+    .info-section ol,
+    .info-section ul{
+
+        padding-left:21px;
+
+    }
+
+
+    /* Formula */
+
+    .formula-box{
+
+        padding:17px;
+
+    }
+
+
+    /* Print link */
+
+    .title-row{
+
+        display:block;
+
+    }
+
+
+    .print-link{
+
+        position:static;
+
+        display:block;
+
+        transform:none;
+
+        text-align:center;
+
+        margin-top:10px;
+
+        font-size:14px;
+
+    }
+
+
+    /* Back to top */
+
+    #backToTop{
+
+        width:46px !important;
+
+        height:46px !important;
+
+        min-height:46px !important;
+
+        padding:0 !important;
+
+        right:20px;
+
+        bottom:20px;
+
+        font-size:21px;
+
+    }
+
+}

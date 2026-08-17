@@ -617,3 +617,141 @@ nav{
 
 }
 
+/* =====================================
+   Lorem Ipsum Generator - Mobile Improvements
+====================================== */
+
+@media (max-width:700px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+
+    header{
+        padding:30px 20px 20px;
+    }
+
+
+    header h1{
+        font-size:30px;
+        line-height:1.2;
+        margin-bottom:12px;
+    }
+
+
+    header p{
+        font-size:16px;
+        line-height:1.5;
+    }
+
+
+    main{
+        padding:10px 15px 20px;
+    }
+
+
+    .tool-container{
+        width:100%;
+        padding:25px 18px;
+        border-radius:18px;
+    }
+
+
+    .tool-container h2{
+        font-size:25px;
+        line-height:1.3;
+    }
+
+
+    .description{
+        font-size:15px;
+        line-height:1.6;
+        margin-bottom:25px;
+    }
+
+
+    /* Controls */
+
+    .controls{
+        flex-direction:column;
+        gap:12px;
+        width:100%;
+    }
+
+
+    .controls input{
+        width:100%;
+        max-width:150px;
+        padding:12px;
+    }
+
+
+    .controls button{
+        width:100%;
+        max-width:250px;
+    }
+
+
+    /* Generate / Clear buttons */
+
+    .buttons{
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+        width:100%;
+    }
+
+
+    .buttons button{
+        width:100%;
+        max-width:250px;
+    }
+
+
+    /* Generated text */
+
+    textarea{
+        margin-top:25px;
+        height:320px;
+        padding:14px;
+        font-size:15px;
+        line-height:1.6;
+    }
+
+
+    /* Information sections */
+
+    .info-section{
+        margin:20px 15px;
+        padding:25px 20px;
+        border-radius:18px;
+    }
+
+
+    .info-section h2{
+        font-size:23px;
+        line-height:1.3;
+    }
+
+
+    .info-section p,
+    .info-section li{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+
+    /* Back to top */
+
+    #backToTop{
+        width:46px;
+        height:46px;
+        min-height:46px;
+        right:20px;
+        bottom:20px;
+        padding:0;
+        font-size:21px;
+    }
+
+}

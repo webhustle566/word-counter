@@ -648,3 +648,79 @@ nav{
     color: #1d4ed8;
 
 }
+
+/* =====================================
+   GPA Calculator - Mobile Improvements
+====================================== */
+
+@media (max-width: 700px) {
+
+    .container {
+        margin: 15px auto;
+        padding: 20px 15px;
+        width: calc(100% - 30px);
+    }
+
+    h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .brand {
+        font-size: 21px;
+    }
+
+    .settings,
+    .classes,
+    .result,
+    .how-it-works {
+        padding: 20px 15px;
+        margin-top: 25px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .settings label {
+        margin: 12px 0;
+    }
+
+    .settings input[type="number"] {
+        width: 130px;
+    }
+
+    .class-row {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+
+    .class-row input,
+    .class-row select {
+        padding: 11px;
+        font-size: 15px;
+    }
+
+    #calculate {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    #gpaResult {
+        font-size: 36px;
+    }
+
+    .how-it-works ol {
+        padding-left: 20px;
+    }
+
+    /* Mobile back-to-top button */
+    #backToTop {
+        width: 46px;
+        height: 46px;
+        right: 20px;
+        bottom: 20px;
+        font-size: 21px;
+    }
+
+}

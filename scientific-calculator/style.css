@@ -260,45 +260,121 @@ footer{
 }
 
 
-/* Mobile */
+/* =====================================
+   Scientific Calculator - Mobile
+====================================== */
 
-@media(max-width:700px){
+@media (max-width: 700px) {
 
-.container{
-
-    margin:15px;
-    padding:20px;
-
-}
-
-
-.button-grid{
-
-    gap:8px;
-
-}
+    body {
+        background: #f3f4f6;
+    }
 
 
-.action-row{
-
-    gap:8px;
-
-}
-
-
-button{
-
-    padding:15px;
-    font-size:16px;
-
-}
+    .container {
+        width: calc(100% - 20px);
+        max-width: none;
+        margin: 20px auto;
+        padding: 20px 15px;
+        border-radius: 16px;
+    }
 
 
-#display{
+    .brand {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
 
-    font-size:26px;
 
-}
+    h1 {
+        font-size: 32px;
+        line-height: 1.15;
+        margin-bottom: 8px;
+    }
+
+
+    .subtitle {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 8px;
+    }
+
+
+    .privacy {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+
+    .calculator {
+        padding: 15px;
+        border-radius: 16px;
+    }
+
+
+    /* Calculator display */
+
+    #display {
+        height: 62px;
+        font-size: 26px;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+
+
+    #angleIndicator {
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+
+
+    /* Calculator buttons */
+
+    .button-grid,
+    .action-row {
+        gap: 8px;
+    }
+
+
+    button {
+        padding: 15px 5px;
+        min-height: 52px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+
+
+    /* Result */
+
+    .result-box {
+        margin-top: 20px;
+        padding: 15px;
+        font-size: 16px;
+    }
+
+
+    /* Instructions */
+
+    .how-to {
+        margin-top: 25px;
+    }
+
+
+    .how-to ul {
+        line-height: 1.7;
+        padding-left: 20px;
+        font-size: 15px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        margin-top: 30px;
+        padding-bottom: 20px;
+    }
 
 }
 
