@@ -677,3 +677,77 @@ nav{
     color: #1d4ed8;
 
 }
+
+/* =====================================
+   Share This Tool
+====================================== */
+
+.share-section {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 60px auto 40px auto;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background: #f3f4f6;
+
+    border-radius: 16px;
+
+}
+
+
+.share-section h2 {
+
+    margin: 0 0 10px 0;
+
+    text-align: center;
+
+}
+
+
+.share-section p {
+
+    color: #6b7280;
+
+    margin: 0 auto 20px auto;
+
+    text-align: center;
+
+}
+
+
+#shareButton {
+
+    display: block;
+
+    margin: 0 auto;
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 24px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+#shareButton:hover {
+
+    background: #1d4ed8;
+
+}

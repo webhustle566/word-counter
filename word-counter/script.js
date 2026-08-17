@@ -169,3 +169,47 @@ toolLinks.forEach(link => {
     }
 
 });
+
+const shareButton = document.getElementById("shareButton");
+
+if (shareButton) {
+
+    shareButton.addEventListener("click", async () => {
+
+        const shareData = {
+            title: document.title,
+            text: "Check out this free tool from WebHustle Tools.",
+            url: window.location.href
+        };
+
+        if (navigator.share) {
+
+            try {
+                await navigator.share(shareData);
+            } catch (error) {
+                // User closed the share menu.
+            }
+
+        } else {
+
+            try {
+
+                await navigator.clipboard.writeText(window.location.href);
+
+                shareButton.textContent = "Link Copied!";
+
+                setTimeout(() => {
+                    shareButton.textContent = "Share This Tool";
+                }, 2000);
+
+            } catch (error) {
+
+                shareButton.textContent = "Copy Link";
+
+            }
+
+        }
+
+    });
+
+}
