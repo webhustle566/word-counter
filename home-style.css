@@ -592,3 +592,9 @@ footer {
     }
 
 }
+
+/* Homepage Navbar - Bold */
+.nav-links > a,
+.tools-dropdown-button {
+    font-weight: 700;
+}
