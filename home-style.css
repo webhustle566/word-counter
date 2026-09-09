@@ -598,3 +598,61 @@ footer {
 .tools-dropdown-button {
     font-weight: 700;
 }
+
+/* =====================================
+   Explore Tools Button
+====================================== */
+
+.explore-tools-btn {
+
+    margin-top: 18px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 14px 24px;
+
+    background: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    border-radius: 12px;
+
+    transition: 0.2s;
+
+}
+
+.explore-tools-btn span {
+
+    font-size: 20px;
+
+    transition: 0.2s;
+
+}
+
+
+.explore-tools-btn:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+}
+
+
+.explore-tools-btn:hover span {
+
+    transform: translateX(4px);
+
+}
