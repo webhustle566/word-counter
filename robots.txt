@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://word-counter-mu-hazel.vercel.app/sitemap.xml
+Sitemap: https://webhustletools.com/sitemap.xml
