@@ -3,55 +3,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://word-counter-mu-hazel.vercel.app/</loc>
+        <loc>https://webhustletools.com/</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://word-counter-mu-hazel.vercel.app/word-counter/</loc>
+        <loc>https://webhustletools.com/word-counter/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://word-counter-mu-hazel.vercel.app/lorem-ipsum/</loc>
+        <loc>https://webhustletools.com/lorem-ipsum/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://word-counter-mu-hazel.vercel.app/qr-code-generator/</loc>
+        <loc>https://webhustletools.com/qr-code-generator/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://word-counter-mu-hazel.vercel.app/password-generator/</loc>
+        <loc>https://webhustletools.com/password-generator/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://word-counter-mu-hazel.vercel.app/gpa-calculator/</loc>
+        <loc>https://webhustletools.com/gpa-calculator/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://word-counter-mu-hazel.vercel.app/scientific-calculator/</loc>
+        <loc>https://webhustletools.com/scientific-calculator/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://word-counter-mu-hazel.vercel.app/unit-converter/</loc>
+        <loc>https://webhustletools.com/unit-converter/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://word-counter-mu-hazel.vercel.app/calorie-calculator/</loc>
+        <loc>https://webhustletools.com/calorie-calculator/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
