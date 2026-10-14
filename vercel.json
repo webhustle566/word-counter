@@ -1,0 +1,29 @@
+{
+  "redirects": [
+    {
+      "source": "/unit-converter/index.html",
+      "destination": "/unit-converter/",
+      "permanent": true
+    },
+    {
+      "source": "/qr-code-generator/index.html",
+      "destination": "/qr-code-generator/",
+      "permanent": true
+    },
+    {
+      "source": "/gpa-calculator/index.html",
+      "destination": "/gpa-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/lorem-ipsum/index.html",
+      "destination": "/lorem-ipsum/",
+      "permanent": true
+    }
+  ]
+}
