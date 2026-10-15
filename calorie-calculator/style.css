@@ -581,6 +581,8 @@ nav {
     padding: 14px 20px;
     gap: 16px;
     background: white;
+    height: 58px;
+    box-sizing: border-box;
 }
 
 .nav-links {
