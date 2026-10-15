@@ -566,24 +566,42 @@ nav{
 }
 
 
-@media(max-width:700px){
 
-    nav{
-
-        padding:18px 20px;
-
+@media (max-width: 700px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 20px;
     }
 
-
-    .nav-links{
-
-        gap:14px;
-
-        font-size:14px;
-
+    .logo a {
+        font-size: 20px;
     }
 
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 14px;
+    }
+
+    .nav-links > a,
+    .tools-dropdown-button {
+        display: inline-flex;
+        align-items: center;
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    .tools-dropdown-button {
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
 }
+
 
 /* =====================================
    Back to Top Button
